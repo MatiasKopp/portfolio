@@ -5,13 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Matias Kopp Portfolio</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="js/stars.js"></script>
+    <script src="js/index.js"></script>
   </head>
-  <body>
-    <main>
-        <h1>Welcome to My Website</h1>  
-    </main>
-    <script src="index.js"></script>
+
+  <body class="h-screen flex flex-wrap items-center justify-center">
+    <div id="stars"></div>
+    <figure class="grid-cols-12 rounded-xl p-8 bg-slate-400 bg-opacity-50">
+      <div class="container">
+        <div class="flex justify-center px-5 -mt-28">
+          <img class="w-48 h-48 rounded-full mx-auto border-solid border-8 border-white-500" src="assets/profile.jpg" width="384" height="512">
+        </div>
+        <h1>Matias Kopp</h1>
+      </div>
+    </figure>
   </body>
 </html>
