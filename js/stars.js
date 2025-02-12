@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
         },
       },
       opacity: {
-        value: 0.49,
+        value: 0.3,
         random: false,
         anim: {
           enable: true,
@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", () => {
         width: 1,
       },
       move: {
-        enable: true,
+        enable: false,
         speed: 0.1,
         direction: "none",
         random: true,

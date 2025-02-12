@@ -1,10 +1,162 @@
 body {
-  background: radial-gradient(circle, rgba(56,4,79,1) 0%, rgba(27,0,40,1) 100%);
+  background: radial-gradient(circle, rgba(56,4,79,1) 0%, rgb(25, 0, 44) 100%);
+  overflow: hidden;
+  z-index: -999;
+}
+
+.planet-1 {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    width: 150px;
+    z-index: -899;
+    border-radius: 50%;
+    border: 10px solid rgba(255, 255, 255, 0.05);
+}
+
+.planet-2 {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    width: 300px;
+    z-index: -899;
+    border-radius: 50%;
+    border: 30px solid rgba(255, 255, 255, 0.05);
+}
+
+.planet-2::after {
+    content: 'asdasdas';
+    display: inline-block;
+    background: white;
+    border-radius: 50%;
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    top: 60px;
+}
+
+.shooting_star {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 4px;
+    height: 4px;
+    margin-left: 10px;
+    background: #ffff;
+    border-radius: 50%;
+    box-shadow: 0 0 3px 2px  rgba(255,255,255,0.75);
+    opacity: 0;
+    animation: shooting_star_anim 5s ease-in-out infinite;
+    z-index: -999;
+}
+
+/* Meteor Tail */
+.shooting_star::before{
+    content:'';
+    position: absolute;
+    top: 50%;
+    left: -50%;
+    transform: translateY(-50%);
+    width: 100px;
+    height: 8px;
+    background: linear-gradient(90deg, #43c19a, transparent);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    z-index: -2;
+}
+
+@keyframes shooting_star_anim
+{
+    0%
+    {
+        transform: rotate(315deg) translateX(0);
+        opacity: 0;
+    }
+    60%
+    {
+        opacity: 1;
+    }
+    100%
+    {
+        transform: rotate(315deg) translateX(-1000px);
+        opacity: 0;
+    }
+}
+
+.shooting_star:nth-of-type(1){
+    top: -10px;
+    right: 75%;
+    left: initial;
+    animation-delay: 0s;
+    animation-duration: 1s;
+}
+.shooting_star:nth-of-type(2){
+    top: -10px;
+    right: 10%;
+    left: initial;
+    animation-delay: 0.2s;
+    animation-duration: 3s;
+}
+.shooting_star:nth-of-type(3){
+    top: 80;
+    right: 20%;
+    left: initial;
+    animation-delay: 0.4s;
+    animation-duration: 2s;
+}
+.shooting_star:nth-of-type(4){
+    top: -10px;
+    right: 180px;
+    left: initial;
+    animation-delay: 0.6s;
+    animation-duration: 1.5s;
+}
+.shooting_star:nth-of-type(5){
+    top: -10px;
+    right: 400px;
+    left: initial;
+    animation-delay: 0.8s;
+    animation-duration: 2.5s;
+}
+.shooting_star:nth-of-type(6){
+    top: -10px;
+    right: 600px;
+    left: initial;
+    animation-delay: 1s;
+    animation-duration: 3s;
+}
+.shooting_star:nth-of-type(7){
+    top: 300px;
+    right: 0px;
+    left: initial;
+    animation-delay: 1.2s;
+    animation-duration: 1.75s;
+}
+.shooting_star:nth-of-type(8){
+    top: -10px;
+    right: 700px;
+    left: initial;
+    animation-delay: 1.4s;
+    animation-duration: 1.25s;
+}
+.shooting_star:nth-of-type(9){
+    top: -10px;
+    right: 1000px;
+    left: initial;
+    animation-delay: 0.75s;
+    animation-duration: 2.25s;
+}
+.shooting_star:nth-of-type(9){
+    top: -10px;
+    right: 450px;
+    left: initial;
+    animation-delay: 2.75s;
+    animation-duration: 2.75s;
 }
 
 #stars {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -9999;
 }
